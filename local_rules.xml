@@ -1,0 +1,13 @@
+<group name="suricata,">
+  <rule id="100100" level="0">
+    <decoded_as>json</decoded_as>
+    <field name="event_type">alert</field>
+    <description>Suricata Alert</description>
+  </rule>
+
+  <rule id="100101" level="10">
+    <if_sid>100100</if_sid>
+    <field name="alert.severity">1</field>
+    <description>Suricata: High Severity Alert</description>
+  </rule>
+</group>
